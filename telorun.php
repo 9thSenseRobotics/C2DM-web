@@ -1,5 +1,7 @@
 <?php
 
+ // the GET from teloui.php calls this page
+ 
 /**
  * Gets an authentication token for a Google service (defaults to
  * Picasa). Puts the token in a session variable and re-uses it as
@@ -13,6 +15,7 @@
  * @param string $service name of the Google service to call (defaults to cloud to device messaging for Android)
  * @return boolean|string An authentication token, or false on failure
  */
+
  
 function googleAuthenticate($username, $password, $source = 'org.abarry.telo', $service = 'ac2dm') {
     //$session_token = $source . '_' . $service . '_auth_token';
@@ -120,7 +123,7 @@ if (!isset($_GET["payload"]) || strlen($_GET["payload"]) <= 0)
 
 // do a lookup in the database against the phoneid and find the google key
 
-// connect tot the database
+// connect to the database
 require_once("db.php");
 connectDatabase();
 

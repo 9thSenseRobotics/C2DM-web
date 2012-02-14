@@ -14,7 +14,7 @@ Select a robot to control:
     <select name="phoneid">
     <?php
     
-    // connect tot the database
+    // connect to the database
     require_once("db.php");
     connectDatabase();
     

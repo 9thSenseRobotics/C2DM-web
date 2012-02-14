@@ -41,8 +41,9 @@ if (strlen($_POST["registrationid"]) > 0 && strlen($_POST["phonename"]) > 0 && s
 // add this to the database
 
 // remove any entries that contain this device id
+// sanitizing with real_escape_string to prevent sql injection attack.
 $sql = "DELETE FROM phones WHERE deviceid = \"" . mysql_real_escape_string($deviceid) . "\"";
-$result = mysql_query($sql);
+$result = mysql_query($sql); // ignore the returned result
 
 // add this new entry
 $sql = "INSERT INTO phones (name, deviceid, registration) VALUES (\"" . mysql_real_escape_string($phonename) . "\", \"" . mysql_real_escape_string($deviceid) . "\", \"" . mysql_real_escape_string($phoneid) . "\")";
@@ -53,6 +54,8 @@ $result = mysql_query($sql);
 //echo $sql;
 
 // The android app expects to see only "OK" here, nothing else.
+// we don't check for this anymore, because on some versions of android throw exceptions
+// when do network calls on the UI thread
 
 echo "OK"
 

@@ -21,8 +21,8 @@ function sendCommand(commandData)
     {
         if (xmlhttp.readyState==4 && xmlhttp.status==200)
         {
-            // uncomment to print the output of the page
-            document.getElementById("myDiv").innerHTML=xmlhttp.responseText;
+            // uncomment next line to print the output of the AJAX result from telorun.php
+            // document.getElementById("myDiv").innerHTML=xmlhttp.responseText;
         }
     }
     // call to telorun.php, last argument is "true" to be asynchronous
@@ -40,7 +40,9 @@ function sendCommand(commandData)
 <button type="button" onclick="sendCommand('f')">Forward</button>
 <button type="button" onclick="sendCommand('b')">Backward</button>
 <button type="button" onclick="sendCommand('l')">Left</button>
-<button type="button" onclick="sendCommand('r')">Right</button>
+<!-- <button type="button" onclick="sendCommand('r')">Right</button> -->
+<button type="button" onclick="sendCommand('test string')">Right</button>
+
 
 </body>
 </html>
