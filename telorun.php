@@ -106,7 +106,7 @@ session_start();
 if (!isset($_SESSION["auth_token"]) || strlen($_SESSION["auth_token"]) < 5)
 {
     //echo "getting auth...";
-    googleAuthenticate("telebotphone@gmail.com", "spotter@");
+    googleAuthenticate("telebotphone@gmail.com", "9thsense&");
 }
 
 // check for what phone the user wants to use, this should be sent from the AJAX UI interface

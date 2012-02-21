@@ -40,8 +40,8 @@ function sendCommand(commandData)
 <button type="button" onclick="sendCommand('f')">Forward</button>
 <button type="button" onclick="sendCommand('b')">Backward</button>
 <button type="button" onclick="sendCommand('l')">Left</button>
-<!-- <button type="button" onclick="sendCommand('r')">Right</button> -->
-<button type="button" onclick="sendCommand('test string')">Right</button>
+<button type="button" onclick="sendCommand('r')">Right</button>
+<!-- <button type="button" onclick="sendCommand('test string')">Right</button> -->
 
 
 </body>
